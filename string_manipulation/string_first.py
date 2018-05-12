@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 # 如何拆分含有多种分隔符的字符串
 
 # 实际案例:
@@ -28,3 +30,5 @@ print(mySplit(s,';,|\t'))
 
 import re
 print(re.split('[,;\t|]+',s))
+
+
