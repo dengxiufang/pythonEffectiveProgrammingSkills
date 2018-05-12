@@ -11,5 +11,26 @@
 
 # 如何设置 python 中文件对象的缓冲行为?
 
-f = open('demo.txt','w')
-f.write('abc')
+# 解决方案
+# 全缓冲 open 函数的 buffering 设置为大于1的整数n,n为缓冲区大小
+
+f = open('thrid_example/demo.txt','w',buffering=2048)
+f.write('+'* 1024)
+f.write('+'* 1023)
+f.write('-'* 2)
+
+# 行缓冲 open 函数的 buffering 设置为 1
+
+
+f2 = open('thrid_example/demo2.txt','w',buffering=1)
+f2.write('abcd')
+f2.write('1234')
+f2.write('\n')
+
+# 无缓冲 open 函数的 buffering 设置为 0
+f3 = open('thrid_example/demo3.txt','w',buffering=1)
+f3.write('a')
+
+#
+
+
